@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
     Copyright 2010 INRIA / CITI Laboratory / Amazones Research Team.
+    Copyright 2015 University of Waikato, Hamilton, NZ.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -28,6 +29,7 @@
     <maven>2.0</maven>
   </prerequisites>
 
+  <groupId>com.github.fracpete</groupId>
   <artifactId>latex-maven</artifactId>
 
   <packaging>pom</packaging>
@@ -54,6 +56,18 @@
         <role>Developer</role>
       </roles>
     </developer>
+    <developer>
+      <id>fracpete</id>
+      <name>Peter Reutemann</name>
+      <email>fracpete@waikato.ac.nz</email>
+      <url>http://www.cms.waikato.ac.nz/~fracpete/</url>
+      <organization>University of Waikato, CS department</organization>
+      <organizationUrl>http://www.cs.waikato.ac.nz/</organizationUrl>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>+12</timezone>
+    </developer>
   </developers>
 
   <organization>
@@ -70,14 +84,15 @@
   </licenses>
 
   <scm>
-    <connection>scm:svn:http://svn.codehaus.org/mojo/trunk/mojo/latex-maven</connection>
-    <developerConnection>scm:svn:https://svn.codehaus.org/mojo/trunk/mojo/latex-maven</developerConnection>
-    <url>http://fisheye.codehaus.org/browse/mojo/trunk/mojo/latex-maven</url>
+    <connection>scm:git:https://github.com/fracpete/latex-maven</connection>
+    <developerConnection>scm:git:https://github.com/fracpete/latex-maven</developerConnection>
+    <url>https://github.com/fracpete/latex-maven</url>
+    <tag>HEAD</tag>
   </scm>
 
   <issueManagement>
-    <system>jira</system>
-    <url>http://jira.codehaus.org/browse/MLATEX</url>
+    <system>Github</system>
+    <url>https://github.com/fracpete/latex-maven/issues</url>
   </issueManagement>
 
 </project>
