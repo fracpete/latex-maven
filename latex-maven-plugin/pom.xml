@@ -128,14 +128,20 @@
   <properties>
     <java.source.version>1.5</java.source.version>
     <java.target.version>1.5</java.target.version>
+    <sonatypeOssDistMgmtSnapshotsUrl>https://oss.sonatype.org/content/repositories/snapshots/</sonatypeOssDistMgmtSnapshotsUrl>
   </properties>
 
   <distributionManagement>
-    <site>
-      <id>codehaus.org</id>
-      <name>Mojo Website</name>
-      <url>dav:https://dav.codehaus.org/mojo/latex-maven-plugin</url>
-    </site>
+    <snapshotRepository>
+      <id>sonatype-nexus-snapshots</id>
+      <name>Sonatype Nexus Snapshots</name>
+      <url>${sonatypeOssDistMgmtSnapshotsUrl}</url>
+    </snapshotRepository>
+    <repository>
+      <id>sonatype-nexus-staging</id>
+      <name>Nexus Release Repository</name>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
   </distributionManagement>
 
   <profiles>
