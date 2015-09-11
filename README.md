@@ -1,6 +1,9 @@
 latex-maven
 ===========
 
+Maven plugin that allows you to create PDF documentation from LaTeX source code
+(fork of https://github.com/mojohaus/latex-maven)
+
 For your `pom.xml`:
 
 ```xml
