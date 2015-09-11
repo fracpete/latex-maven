@@ -33,7 +33,7 @@
   <artifactId>latex-maven</artifactId>
 
   <packaging>pom</packaging>
-  <version>1.3.4</version>
+  <version>1.3.5-SNAPSHOT</version>
 
   <modules>
     <module>latex-maven-plugin</module>
