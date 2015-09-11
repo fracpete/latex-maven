@@ -2,6 +2,7 @@ package org.codehaus.mojo.latex;
 
 /*
  * Copyright 2010 INRIA / CITI Laboratory / Amazones Research Team.
+ * Copyright 2015 University of Waikato, Hamilton, NZ.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -39,6 +40,7 @@ import static org.apache.commons.io.FileUtils.iterateFiles;
  * LaTeX documents building goal.
  *
  * @author Julien Ponge
+ * @author FracPete (fracpete at waikato dot ac dot nz)
  * @goal latex
  * @phase compile
  */
