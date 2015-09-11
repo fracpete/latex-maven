@@ -21,7 +21,7 @@
   <parent>
     <groupId>com.github.fracpete</groupId>
     <artifactId>latex-maven</artifactId>
-    <version>1.3.5-SNAPSHOT</version>
+    <version>1.4.0</version>
   </parent>
   
   <prerequisites>
@@ -30,7 +30,7 @@
 
   <artifactId>latex-maven-plugin</artifactId>
   <packaging>maven-plugin</packaging>
-  <version>1.3.5-SNAPSHOT</version>
+  <version>1.4.0</version>
 
   <name>LaTeX Maven Plugin</name>
   <description>The LaTeX Maven Plugin is useful for building a set of LaTeX documents.</description>
