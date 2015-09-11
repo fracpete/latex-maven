@@ -3,7 +3,7 @@ latex-maven
 
 For your `pom.xml`:
 
-```
+```xml
   <build>
     <pluginManagement>
       <plugins>
