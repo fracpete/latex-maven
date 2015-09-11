@@ -19,7 +19,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.codehaus.mojo</groupId>
+    <groupId>com.github.fracpete</groupId>
     <artifactId>latex-maven</artifactId>
     <version>1.2-SNAPSHOT</version>
   </parent>

@@ -93,12 +93,41 @@ public class LaTeXMojo
      */
     private String bibtex;
 
+    /**
+     * Allows to skip the build.
+     *
+     * @parameter expression="${latex.skipBuild}" default-value="false"
+     */
+    private boolean skipBuild;
+
+    /**
+     * Allows to force the build.
+     *
+     * @parameter expression="${latex.forceBuild}" default-value="false"
+     */
+    private boolean forceBuild;
+
     public void execute()
         throws MojoExecutionException, MojoFailureException
     {
         try
         {
+            if (!docsRoot.exists())
+            {
+                getLog().info("Directory '" + docsRoot + "' does not exist, skipped!");
+                return;
+            }
+            if (skipBuild)
+            {
+                getLog().info("Build skipped!");
+                return;
+            }
             final File[] docDirs = getDocDirs();
+            if (docDirs.length == 0)
+            {
+                getLog().info("Directory '" + docsRoot + "' contains no sub-directories, skipped!");
+                return;
+            }
             final File[] buildDirs = prepareLaTeXBuildDirectories( docDirs );
             buildDocuments( buildDirs );
         }
@@ -118,7 +147,7 @@ public class LaTeXMojo
             final File pdfFile = new File( dir, dir.getName() + ".pdf" );
             final File bibFile = new File( dir, dir.getName() + ".bib" );
 
-            if ( requiresBuilding(dir, pdfFile) )
+            if ( forceBuild || requiresBuilding(dir, pdfFile) )
             {
 
                 final CommandLine pdfLaTeX =
@@ -243,7 +272,6 @@ public class LaTeXMojo
     {
         return docsRoot.listFiles( new FileFilter()
         {
-            @Override
             public boolean accept( File pathname )
             {
                 return pathname.isDirectory() && !( pathname.getName().equals( commonsDirName ) ) &&

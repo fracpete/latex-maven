@@ -20,7 +20,7 @@
 
   <parent>
     <artifactId>latex-maven</artifactId>
-    <groupId>org.codehaus.mojo</groupId>
+    <groupId>com.github.fracpete</groupId>
     <version>1.2-SNAPSHOT</version>
   </parent>
 
