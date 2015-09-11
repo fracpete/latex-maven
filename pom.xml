@@ -95,6 +95,10 @@
     <url>https://github.com/fracpete/latex-maven/issues</url>
   </issueManagement>
 
+  <properties>
+    <sonatypeOssDistMgmtSnapshotsUrl>https://oss.sonatype.org/content/repositories/snapshots/</sonatypeOssDistMgmtSnapshotsUrl>
+  </properties>
+
   <distributionManagement>
     <snapshotRepository>
       <id>sonatype-nexus-snapshots</id>

@@ -127,7 +127,6 @@
   <properties>
     <java.source.version>1.5</java.source.version>
     <java.target.version>1.5</java.target.version>
-    <sonatypeOssDistMgmtSnapshotsUrl>https://oss.sonatype.org/content/repositories/snapshots/</sonatypeOssDistMgmtSnapshotsUrl>
   </properties>
 
   <profiles>
