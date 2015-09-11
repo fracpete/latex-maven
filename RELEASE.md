@@ -16,9 +16,3 @@ Maven Central
   mvn release:clean release:prepare release:perform
   </pre>
 
-* After successful deployment, push the changes out:
-
-  <pre>
-  git push
-  </pre>
-
