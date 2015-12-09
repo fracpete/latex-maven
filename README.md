@@ -55,4 +55,5 @@ Options
 * `latex.bibtex=...` the name of the bibtex binary (eg `bibtex8` or `biber` instead of `bibtex`)
 * `latex.skipBuild=true|false` for skipping the build, default: `false`
 * `latex.forceBuild=true|false` for forcing the build, default: `false`
+* `latex.dummyBuild=true|false` for creating dummy PDFs (eg if no LaTeX present), default: `false`
 
