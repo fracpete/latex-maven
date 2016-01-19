@@ -23,6 +23,9 @@ For your `pom.xml`:
               </goals>
             </execution>
           </executions>
+          <configuration>
+            <forceBuild>true</forceBuild>
+          </configuration>
         </plugin>
         ...
       </plugins>
