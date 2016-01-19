@@ -188,6 +188,13 @@ public class LaTeXMojo
      */
     private boolean dummyBuild;
 
+    /**
+     * Extra times to run pdflatex. Useful to get references right.
+     *
+     * @parameter expression="${latex.extraRuns}" default-value="0"
+     */
+    private int extraRuns;
+
     public void execute()
         throws MojoExecutionException, MojoFailureException
     {
@@ -293,7 +300,11 @@ public class LaTeXMojo
                     execute( bibTeX, dir );
                     execute( pdfLaTeX, dir );
                 }
-                execute( pdfLaTeX, dir );
+
+                for ( int runs = extraRuns + 1; runs > 0; runs-- )
+                {
+                    execute( pdfLaTeX, dir );
+                }
 
                 copyFile( pdfFile, new File( buildDir, pdfFile.getName() ) );
             }
