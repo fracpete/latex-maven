@@ -268,6 +268,7 @@ public class LaTeXMojo
             final File texFile = new File( dir, dir.getName() + ".tex" );
             final File pdfFile = new File( dir, dir.getName() + ".pdf" );
             final File bibFile = new File( dir, dir.getName() + ".bib" );
+            final File gloFile = new File( dir, dir.getName() + ".glo" );
 
             if ( dummyBuild )
             {
@@ -294,7 +295,17 @@ public class LaTeXMojo
                     getLog().debug( "bibtex: " + bibTeX );
                 }
 
+                final CommandLine makeglossaries = parse( executablePath( "makeglossaries" ) ).addArgument( dir.getName() );
+                if ( getLog().isDebugEnabled() )
+                {
+                    getLog().debug( "makeglossaries: " + makeglossaries );
+                }
+
                 execute( pdfLaTeX, dir );
+                if ( gloFile.exists() )
+                {
+                    execute( makeglossaries, dir );
+                }
                 if ( bibFile.exists() )
                 {
                     execute( bibTeX, dir );
