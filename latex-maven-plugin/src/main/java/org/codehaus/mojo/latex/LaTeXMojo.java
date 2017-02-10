@@ -302,18 +302,17 @@ public class LaTeXMojo
                 }
 
                 execute( pdfLaTeX, dir );
-                if ( gloFile.exists() )
-                {
-                    execute( makeglossaries, dir );
-                }
-                if ( bibFile.exists() )
-                {
-                    execute( bibTeX, dir );
-                    execute( pdfLaTeX, dir );
-                }
-
                 for ( int runs = extraRuns + 1; runs > 0; runs-- )
                 {
+                    if ( gloFile.exists() )
+                    {
+                        execute( makeglossaries, dir );
+                    }
+                    if ( bibFile.exists() )
+                    {
+                        execute( bibTeX, dir );
+                        execute( pdfLaTeX, dir );
+                    }
                     execute( pdfLaTeX, dir );
                 }
 
