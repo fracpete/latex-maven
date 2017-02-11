@@ -12,7 +12,7 @@ Maven Central
 
 * Run the following command to deploy the artifact:
 
-  <pre>
+  ```
   mvn release:clean release:prepare release:perform
-  </pre>
+  ```
 
