@@ -37,7 +37,7 @@ For your `pom.xml`:
         <artifactId>latex-maven-plugin</artifactId>
       </plugin>
       ...
-    <plugins>
+    </plugins>
   </build>
 ```
 
