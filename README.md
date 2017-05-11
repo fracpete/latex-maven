@@ -49,6 +49,11 @@ Use the following command to build the LaTeX documentation:
 mvn latex:latex
 ```
 
+FAQs
+----
+* My references are undefined: Check if your backend in LaTeX is the same as specified in the pom (bibtex configuration)
+* I have no references at all: The name of the bibtex file needs to be the same as the main latex file. If your main latex file is named sample.tex, the bibfile needs to be sample.bib.
+
 Options
 -------
 
