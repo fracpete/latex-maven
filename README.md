@@ -14,7 +14,7 @@ For your `pom.xml`:
         <plugin>
           <groupId>com.github.fracpete</groupId>
           <artifactId>latex-maven-plugin</artifactId>
-          <version>1.4.4</version>
+          <version>1.4.5</version>
           <executions>
             <execution>
               <phase>package</phase>
