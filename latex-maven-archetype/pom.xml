@@ -21,11 +21,11 @@
   <parent>
     <artifactId>latex-maven</artifactId>
     <groupId>com.github.fracpete</groupId>
-    <version>1.4.5-SNAPSHOT</version>
+    <version>1.4.5</version>
   </parent>
 
   <artifactId>latex-maven-archetype</artifactId>
-  <version>1.4.5-SNAPSHOT</version>
+  <version>1.4.5</version>
 
   <name>LaTeX Maven Archetype</name>
   <description>The LaTeX Maven Archetype is kickstarts your LaTeX / Maven projects.</description>
