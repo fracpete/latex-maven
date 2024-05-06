@@ -49,6 +49,8 @@ Use the following command to build the LaTeX documentation:
 mvn latex:latex
 ```
 
+**NB:** Requires Maven [2.2.1](https://archive.apache.org/dist/maven/binaries/apache-maven-2.2.1-bin.zip) and Java 8 for building.
+
 FAQs
 ----
 * My references are undefined: Check if your backend in LaTeX is the same as specified in the pom (bibtex configuration)
